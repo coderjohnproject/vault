@@ -1,0 +1,33 @@
+{
+  "version": "1.0",
+  "type": "Create",
+  "createdAlarm": {
+    "alarmName": "Billing Alarm",
+    "alarmDescription": "Send me an email when my billing reaches the specified amount.",
+    "alarmArn": "arn:aws:cloudwatch:us-east-1:XXXXXXXXXXXX:alarm:Billing Alarm",
+    "alarmConfigurationUpdatedTimestamp": "2020-01-19T17:04:45.436+0000",
+    "namespace": "AWS/Billing",
+    "metricName": "EstimatedCharges",
+    "statistic": "Maximum",
+    "period": 21600,
+    "dimensions": [
+      {
+        "value": "USD",
+        "name": "Currency"
+      }
+    ],
+    "threshold": 15,
+    "comparisonOperator": "GreaterThanThreshold",
+    "evaluationPeriods": 1,
+    "datapointsToAlarm": 1,
+    "treatMissingData": "missing",
+    "stateValue": "INSUFFICIENT_DATA",
+    "stateUpdatedTimestamp": "2020-01-19T17:04:45.436+0000",
+    "actionsEnabled": true,
+    "alarmActions": [
+      "arn:aws:sns:us-east-1:XXXXXXXXXXXX:billingalarm"
+    ],
+    "insufficientDataActions": [],
+    "okactions": []
+  }
+}
